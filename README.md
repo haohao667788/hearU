@@ -17,7 +17,9 @@ base on meteor 0.5.9
 具体的安装可参考[Meteor官网][1]。
 
 Meteor目前还只支持Linux/Mac平台。
+
 Windows的支持，目前有用户提供了安装包，可以[在此参考][2]
+BTW: windows下只需要安装这个Meteor Preview安装包，其中已经包含了Node和NPM。
 
 <pre>
  > meteor --version
