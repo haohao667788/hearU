@@ -1,18 +1,21 @@
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <title>Hear [U]</title>
+  <link rel="stylesheet" href="../client/hearu.css"/>
   <script src="http://a.tbcdn.cn/s/kissy/1.3.0/seed-min.js"></script>
   <script type="text/javascript">
-    KISSY.config({
-      packages:[
-        {
-          debug: true,
-          name:"widget", // 包名
-          path:"client/" // 包对应路径, 相对路径指相对于当前页面路径
-        }
-      ]
-    });
+//    KISSY.config({
+//      packages:[
+//        {
+//          debug: true,
+//          name:"widget", // 包名
+//          path:"client/" // 包对应路径, 相对路径指相对于当前页面路径
+//        }
+//      ]
+//    });
   </script>
 </head>
 
@@ -20,7 +23,7 @@
 <!--登录界面在另一个新的页面，其它页面都在这里-->
 <section id="Menu"></section>
 
-<section id="Main">
+<section id="Main" class="EntryList">
   <section id="EntryList">
     <header class="head-bar">我的歌单</header>
     <div class="entry-list-wrapper">
@@ -49,4 +52,8 @@
     <header class="head-bar">正在播放：晴天</header>
   </section>
 </section>
+<script type="text/javascript" src="sslog.js"></script>
+<script type="text/javascript" src="dragswitch.js"></script>
+<script type="text/javascript" src="hearu.js"></script>
 </body>
+</html>

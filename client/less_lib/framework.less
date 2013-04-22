@@ -1,0 +1,111 @@
+@import "lesshat";
+
+// framework
+.fullbox {
+  height: 100%;
+  width: 100%;
+}
+
+html, body {
+  .fullbox;
+  overflow: hidden;
+}
+
+#Menu, #Main {
+  .fullbox;
+  position: fixed;
+}
+#EntryList, #SongList, #PlayBox {
+  .fullbox;
+  position: absolute;
+  .box-sizing(border-box);
+  border: 2px solid #000;
+
+  .head-bar {
+    height: 40px;
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    line-height: 40px;
+  }
+}
+
+.dragswitch-dragging * {
+  .transition(~"none !important");
+}
+
+#Menu {
+  background-color: #f00;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+#Main {
+  overflow: hidden;
+  z-index: 1;
+  .transition(~"transform 0.3s ease-out");
+}
+
+#EntryList {
+  background-color: #0f0;
+}
+
+#SongList {
+  background-color: #00f;
+}
+
+#PlayBox {
+  background-color: #fff;
+}
+
+// Router
+.Menu {
+  #Main {
+    .transform(~"translateX(200px)");
+  }
+}
+
+
+.EntryList {
+  #EntryList {
+    left: 0;
+    top: 0;
+  }
+  #SongList {
+    left: 0;
+    top: 100%;
+  }
+  #PlayBox {
+    left: 100%;
+    top: 0;
+  }
+}
+.SongList {
+  #EntryList {
+    left: 0;
+    top: -100%;
+  }
+  #SongList {
+    left: 0;
+    top: 0;
+  }
+  #PlayBox {
+    left: 100%;
+    top: 0;
+  }
+}
+.PlayBox {
+  #EntryList {
+    left: 0;
+    top: -100%;
+  }
+  #SongList {
+    left: -100%;
+    top: 0;
+  }
+  #PlayBox {
+    left: 0;
+    top: 0;
+  }
+}
