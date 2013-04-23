@@ -7,6 +7,9 @@
     defaultConfig = {
       distance: 6,
       angle: Math.PI / 6,
+      checkvalid: null,
+      inertiaMove: false,
+      disable: false,
       binds: [
         null, null, null, null, {
           moveEls: [],
@@ -30,6 +33,7 @@
       DragSwitch.prototype.init = function() {
         var el, item, _i, _j, _len, _len1, _ref, _ref1;
         this.config = S.merge(defaultConfig, this.config);
+        this.disable = this.config.disable;
         if (typeof this.el === "string") {
           this.isSelector = true;
         }
@@ -84,6 +88,13 @@
       };
 
       DragSwitch.prototype.touchStart = function(ev) {
+        if (this.disable) {
+          return;
+        }
+        this.enabled = this.config.checkvalid ? this.config.checkvalid() : true;
+        if (!this.enabled) {
+          return;
+        }
         ev.halt();
         ev = ev.originalEvent;
         this.istouchStart = true;
@@ -92,8 +103,8 @@
         this.key = null;
         this.startPoint = [ev.touches[0].pageX, ev.touches[0].pageY];
         this.lastPoint = this.startPoint.slice();
-        this.saveMatrixState();
-        return $("body").addClass("dragswitch-dragging");
+        this.yesterPoint = this.lastPoint.slice();
+        return this.saveMatrixState();
       };
 
       DragSwitch.prototype.touchMove = function(e) {
@@ -119,9 +130,12 @@
             this.eventType = null;
           }
           this.key = (this.eventType === "dragUp" ? 0 : (this.eventType === "dragRight" ? 1 : (this.eventType === "dragDown" ? 2 : (this.eventType === "dragLeft" ? 3 : null))));
+          this.obbKey = 1 - this.key % 2;
           this.effectBind = this.config.binds[this.key];
           this.moveEls = this.effectBind.moveEls;
           this.enabled = this.effectBind.checkvalid ? this.effectBind.checkvalid() : true;
+          this.startTime = new Date;
+          $("body").addClass("dragswitch-dragging");
         }
         if (!this.eventType || !this.enabled) {
           return;
@@ -138,29 +152,41 @@
         if (!e.isDefaultPrevented()) {
           this.move(point);
         }
-        return this.lastPoint = point.slice();
+        this.yesterPoint = this.lastPoint.slice();
+        this.yesterTime = new Date(this.lastTime);
+        this.lastPoint = point.slice();
+        return this.lastTime = new Date;
       };
 
       DragSwitch.prototype.touchEnd = function(e) {
-        var obj;
+        var v;
         $("body").removeClass("dragswitch-dragging");
         if (this.istouchStart && this.isSendStart) {
-          this.fire(this.eventType + "End", S.mix(e, {
-            self: this
-          }));
-          obj = this.effectBind;
-          if (Math.abs(this.distance) >= obj.validDistance) {
-            if (obj.passCallback) {
-              obj.passCallback.call(e.target, S.mix(e, {
-                self: this
-              }));
-            }
+          if (!this.config.inertiaMove) {
+            this.touchEndHandler(e);
           } else {
-            this.restoreMatrixState();
+            v = (this.yesterPoint[this.obbKey] - this.lastPoint[this.obbKey]) / (this.yesterTime - this.lastTime);
           }
         }
         this.istouchStart = false;
         return this.isSendStart = false;
+      };
+
+      DragSwitch.prototype.touchEndHandler = function(e) {
+        var obj;
+        this.fire(this.eventType + "End", S.mix(e, {
+          self: this
+        }));
+        obj = this.effectBind;
+        if (Math.abs(this.distance) >= obj.validDistance) {
+          if (obj.passCallback) {
+            return obj.passCallback.call(e.target, S.mix(e, {
+              self: this
+            }));
+          }
+        } else {
+          return this.restoreMatrixState();
+        }
       };
 
       DragSwitch.prototype.saveMatrixState = function() {
@@ -199,7 +225,7 @@
       };
 
       DragSwitch.prototype.move = function(endPoint) {
-        var currentTransform, distance, el, key, lastPoint, rawDistance, startPoint, _i, _len, _ref, _results;
+        var currentMatrix, distance, el, key, lastPoint, rawDistance, startPoint, _i, _len, _ref, _results;
         key = this.key;
         startPoint = this.startPoint;
         lastPoint = this.lastPoint;
@@ -212,16 +238,24 @@
         _results = [];
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           el = _ref[_i];
-          currentTransform = this.getMatrix(el);
-          _results.push(this.setMatrix(el, this.translate(currentTransform, distance, key % 2)));
+          currentMatrix = this.getMatrix(el);
+          _results.push(this.setMatrix(el, this.translate(currentMatrix, distance, key % 2)));
         }
         return _results;
       };
 
-      DragSwitch.prototype.translate = function(transform, distance, hori) {
-        if (UA.webkit) {
-          return (new WebKitCSSMatrix(transform)).translate(distance * hori, distance * (1 - hori)).toString();
+      DragSwitch.prototype.translate = function(currentMatrix, distance, hori) {
+        var matrix;
+        matrix = currentMatrix.match(/[0-9\.\-]+/g);
+        if (!matrix) {
+          matrix = [1, 0, 0, 1, 0, 0];
         }
+        matrix.forEach(function(item, key) {
+          return matrix[key] = parseFloat(item);
+        });
+        matrix[4] += distance * hori;
+        matrix[5] += distance * (1 - hori);
+        return "matrix(" + matrix.join(',') + ")";
       };
 
       return DragSwitch;

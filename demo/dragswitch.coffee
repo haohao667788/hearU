@@ -4,6 +4,9 @@ KISSY.add "widget/dragswitch", (S, Node, Event, UA, SSlog) ->
   defaultConfig =
     distance: 6
     angle: Math.PI / 6
+    checkvalid: null
+    inertiaMove: false
+    disable    : false
     binds: [null, null, null, null,
             moveEls: []
             maxDistance: 99999
@@ -22,6 +25,7 @@ KISSY.add "widget/dragswitch", (S, Node, Event, UA, SSlog) ->
 
     init: ->
       @config = S.merge(defaultConfig, @config)
+      @disable = @config.disable
       @isSelector = true if typeof @el is "string"
       @el = $(@el) if !@isSelector
       @tanAngel = Math.tan(@config.angle)
@@ -46,6 +50,9 @@ KISSY.add "widget/dragswitch", (S, Node, Event, UA, SSlog) ->
         @el.on "touchend", (ev) => @touchEnd(ev)
 
     touchStart: (ev)->
+      return if @disable
+      @enabled = if @config.checkvalid then @config.checkvalid() else true # 外部检查
+      return if !@enabled
       ev.halt()
       ev = ev.originalEvent
       @istouchStart = true
@@ -54,8 +61,8 @@ KISSY.add "widget/dragswitch", (S, Node, Event, UA, SSlog) ->
       @key = null
       @startPoint = [ev.touches[0].pageX, ev.touches[0].pageY]
       @lastPoint = @startPoint.slice()
+      @yesterPoint = @lastPoint.slice()
       @saveMatrixState()
-      $("body").addClass "dragswitch-dragging"
 
     touchMove: (e)->
       return if !@istouchStart
@@ -76,9 +83,13 @@ KISSY.add "widget/dragswitch", (S, Node, Event, UA, SSlog) ->
         else
           @eventType = null
         @key = (if @eventType is "dragUp" then 0 else (if @eventType is "dragRight" then 1 else (if @eventType is "dragDown" then 2 else (if @eventType is "dragLeft" then 3 else null))))
+        @obbKey = 1 - @key % 2
         @effectBind = @config.binds[@key]
         @moveEls = @effectBind.moveEls
-        @enabled = if @effectBind.checkvalid then @effectBind.checkvalid() else true
+        @enabled = if @effectBind.checkvalid then @effectBind.checkvalid() else true # 内部检查
+        # 记录初始时间
+        @startTime = new Date
+        $("body").addClass "dragswitch-dragging"
       return if !@eventType or !@enabled
       if !@isSendStart
         @fire @eventType + "Start", S.mix(e, self: @)
@@ -86,21 +97,31 @@ KISSY.add "widget/dragswitch", (S, Node, Event, UA, SSlog) ->
       @fire @eventType, S.mix(e, self: @)
       if !e.isDefaultPrevented()
         @move point
+      @yesterPoint = @lastPoint.slice()
+      @yesterTime = new Date(@lastTime)
       @lastPoint = point.slice()
+      @lastTime = new Date
 
     touchEnd: (e)->
       $("body").removeClass "dragswitch-dragging"
       if @istouchStart and @isSendStart
-        @fire @eventType + "End", S.mix(e, self: @)
-        obj = @effectBind
-        if Math.abs(@distance) >= obj.validDistance
-          if obj.passCallback
-            obj.passCallback.call e.target, S.mix(e, self: @)
+        if !@config.inertiaMove
+          @touchEndHandler(e)
         else
-          # 复原
-          @restoreMatrixState()
+          v = (@yesterPoint[@obbKey] - @lastPoint[@obbKey]) / (@yesterTime - @lastTime)
+
       @istouchStart = false
       @isSendStart = false
+
+    touchEndHandler: (e)->
+      @fire @eventType + "End", S.mix(e, self: @)
+      obj = @effectBind
+      if Math.abs(@distance) >= obj.validDistance
+        if obj.passCallback
+          obj.passCallback.call e.target, S.mix(e, self: @)
+      else
+        # 复原
+        @restoreMatrixState()
 
     saveMatrixState: ->
       for el in @effectEls
@@ -128,14 +149,18 @@ KISSY.add "widget/dragswitch", (S, Node, Event, UA, SSlog) ->
       distance = (if key % 2 is 0 then endPoint[1] - lastPoint[1] else endPoint[0] - lastPoint[0])
       return if !@effectBind or @effectBind.maxDistance < Math.abs(rawDistance)
       for el in @moveEls
-        currentTransform = @getMatrix el
-        @setMatrix el, @translate(currentTransform, distance, key % 2)
+        currentMatrix = @getMatrix el
+        @setMatrix el, @translate(currentMatrix, distance, key % 2)
 
-    translate: (transform, distance, hori)->
-      if UA.webkit
-        (new WebKitCSSMatrix(transform)).translate(distance * hori, distance * (1 - hori)).toString()
-
-
+    translate: (currentMatrix, distance, hori)->
+      matrix = currentMatrix.match /[0-9\.\-]+/g
+      matrix = [1,0,0,1,0,0] if !matrix
+      matrix.forEach (item, key)-> matrix[key] = parseFloat(item)
+      matrix[4] += distance * hori
+      matrix[5] += distance * (1 - hori)
+      return "matrix(" + matrix.join(',') + ")"
+#      if UA.webkit
+#        (new WebKitCSSMatrix(currentMatrix)).translate(distance * hori, distance * (1 - hori)).toString()
 
 
 ,

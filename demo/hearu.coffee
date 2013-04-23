@@ -1,9 +1,9 @@
-KISSY.use "dom, node, anim, event, widget/dragswitch, widget/sslog", (S, DOM, Node, Anim, Event, HoriDrag, SSlog) ->
+KISSY.use "dom, node, anim, event, widget/dragswitch, widget/sslog, widget/draglist", (S, DOM, Node, Anim, Event, DragSwitch, SSlog, DragList) ->
   $ = KISSY.all
   $("body").addClass "EntryList"
 
   # 初始化 UI
-  new HoriDrag("#Main",
+  new DragSwitch("#Main",
     binds: [
       null,
       {
@@ -31,16 +31,19 @@ KISSY.use "dom, node, anim, event, widget/dragswitch, widget/sslog", (S, DOM, No
     ]
   )
 
-  new HoriDrag(".entry-item",
+  new DragSwitch(".entry-item",
     binds: [
       null,
       null,
       null,
       {
       moveEls        : [] # 如果不为空，则只移动这里的元素
-      maxDistance   : 40
+      maxDistance   : 60
       validDistance : 30
       passCallback  : (ev)->
+        $(ev.currentTarget).parent().addClass "entry-list-left"
+        ev.currentTarget.style.webkitTransform = ""
+
 #        $("#Main")[0].style.webkitTransform = ""
 #        $("body")[0].className = "Menu"
       failCallback  : null
@@ -48,4 +51,9 @@ KISSY.use "dom, node, anim, event, widget/dragswitch, widget/sslog", (S, DOM, No
       }
     ]
   )
+
+  $('#EntryList').on "touchstart", ->
+    $(".entry-list-item").removeClass "entry-list-left"
+#
+#  new DragList
 

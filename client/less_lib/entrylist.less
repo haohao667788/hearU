@@ -21,7 +21,7 @@
 .entry-item-ctrl-left {
   display: block;
   float: left;
-  .size(40px, 40px);
+  .size(200px, 40px);
   background: #124a32;
 }
 
@@ -37,6 +37,7 @@
   left: 0;
   background: #0a21f9;
   .size(100%, 100%);
+  .transition(~"transform 0.3s ease-out");
 }
 
 .entry-list-left {
@@ -45,9 +46,9 @@
   }
 }
 
-.entry-list-left {
+.entry-list-right {
   .entry-item {
-    .translateX(40px);
+    .translateX(-40px);
   }
 }
 
