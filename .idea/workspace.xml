@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a60657b-c206-4c86-b4c0-4c449b248e8b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/draglist.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/dragswitch.coffee" afterPath="$PROJECT_DIR$/demo/dragswitch.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/dragswitch.js" afterPath="$PROJECT_DIR$/demo/dragswitch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/less_lib/entrylist.less" afterPath="$PROJECT_DIR$/client/less_lib/entrylist.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/hearu.coffee" afterPath="$PROJECT_DIR$/demo/hearu.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/hearu.css" afterPath="$PROJECT_DIR$/client/hearu.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/hearu.js" afterPath="$PROJECT_DIR$/demo/hearu.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/index.html" afterPath="$PROJECT_DIR$/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hearU.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,10 +87,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dragswitch.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="dragswitch.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/dragswitch.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="29" selection-start="3224" selection-end="3224" vertical-scroll-proportion="0.6328125">
+            <state line="90" column="29" selection-start="3224" selection-end="3224" vertical-scroll-proportion="-6.6">
               <folding />
             </state>
           </provider>
@@ -149,10 +141,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="10" selection-start="1349" selection-end="1349" vertical-scroll-proportion="-17.875">
+            <state line="65" column="13" selection-start="2398" selection-end="2398" vertical-scroll-proportion="0.95412844">
               <folding />
             </state>
           </provider>
@@ -187,11 +179,11 @@
         <option value="$PROJECT_DIR$/demo/hearu.js" />
         <option value="$PROJECT_DIR$/demo/sslog.js" />
         <option value="$PROJECT_DIR$/client/less_lib/framework.less" />
-        <option value="$PROJECT_DIR$/demo/index.html" />
         <option value="$PROJECT_DIR$/demo/draglist.coffee" />
         <option value="$PROJECT_DIR$/client/less_lib/entrylist.less" />
         <option value="$PROJECT_DIR$/demo/hearu.coffee" />
         <option value="$PROJECT_DIR$/demo/dragswitch.coffee" />
+        <option value="$PROJECT_DIR$/demo/index.html" />
       </list>
     </option>
   </component>
@@ -494,13 +486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="10" selection-start="1349" selection-end="1349" vertical-scroll-proportion="-17.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/less_lib/framework.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="39" selection-start="620" selection-end="643" vertical-scroll-proportion="-7.52">
@@ -531,7 +516,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/dragswitch.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="29" selection-start="3224" selection-end="3224" vertical-scroll-proportion="0.6328125">
+        <state line="90" column="29" selection-start="3224" selection-end="3224" vertical-scroll-proportion="-6.6">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="13" selection-start="2398" selection-end="2398" vertical-scroll-proportion="0.95412844">
           <folding />
         </state>
       </provider>
