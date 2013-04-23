@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a60657b-c206-4c86-b4c0-4c449b248e8b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/dragswitch.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/less_lib/entrylist.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/less_lib/framework.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/hearu.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/widget/horidrag.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/index.html_old" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/sslog.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/hearu.css" afterPath="$PROJECT_DIR$/client/hearu.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/js/hearu.js" afterPath="$PROJECT_DIR$/client/js/hearu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/hearu.js" afterPath="$PROJECT_DIR$/server/hearu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/packages" afterPath="$PROJECT_DIR$/.meteor/packages" />
-    </list>
+    <list default="true" id="9a60657b-c206-4c86-b4c0-4c449b248e8b" name="Default" comment="" />
     <ignored path="hearU.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="9a60657b-c206-4c86-b4c0-4c449b248e8b" time="1366614315673" ignored="false" />
