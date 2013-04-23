@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a60657b-c206-4c86-b4c0-4c449b248e8b" name="Default" comment="" />
+    <list default="true" id="9a60657b-c206-4c86-b4c0-4c449b248e8b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/less_lib/framework.less" afterPath="$PROJECT_DIR$/client/less_lib/framework.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/hearu.css" afterPath="$PROJECT_DIR$/client/hearu.css" />
+    </list>
     <ignored path="hearU.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="9a60657b-c206-4c86-b4c0-4c449b248e8b" time="1366614315673" ignored="false" />
@@ -16,7 +19,7 @@
     <file path="/horidrag.js" changelist="9a60657b-c206-4c86-b4c0-4c449b248e8b" time="1366615306833" ignored="false" />
     <file path="/test.html" changelist="9a60657b-c206-4c86-b4c0-4c449b248e8b" time="1366554328780" ignored="false" />
     <file path="/sslog.js" changelist="9a60657b-c206-4c86-b4c0-4c449b248e8b" time="1366562568364" ignored="false" />
-    <file path="/framework.less" changelist="9a60657b-c206-4c86-b4c0-4c449b248e8b" time="1366624469865" ignored="false" />
+    <file path="/framework.less" changelist="9a60657b-c206-4c86-b4c0-4c449b248e8b" time="1366683682078" ignored="false" />
     <file path="/horidrag.coffee" changelist="9a60657b-c206-4c86-b4c0-4c449b248e8b" time="1366633136374" ignored="false" />
     <file path="/dragswitch.coffee" changelist="9a60657b-c206-4c86-b4c0-4c449b248e8b" time="1366632265448" ignored="false" />
     <file path="/hearu.coffee" changelist="9a60657b-c206-4c86-b4c0-4c449b248e8b" time="1366633085481" ignored="false" />
@@ -51,25 +54,25 @@
       <file leaf-file-name="entrylist.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/less_lib/entrylist.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="3" selection-start="548" selection-end="548" vertical-scroll-proportion="-15.32">
+            <state line="44" column="3" selection-start="548" selection-end="548" vertical-scroll-proportion="-26.4">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="framework.less" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="framework.less" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/less_lib/framework.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0">
+            <state line="99" column="21" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.82300884">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sslog.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sslog.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/sslog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="85" selection-end="171" vertical-scroll-proportion="0.06637168">
+            <state line="3" column="0" selection-start="85" selection-end="171" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -96,7 +99,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="35" selection-start="627" selection-end="627" vertical-scroll-proportion="-13.75">
+            <state line="23" column="23" selection-start="584" selection-end="584" vertical-scroll-proportion="-1.625">
               <folding />
             </state>
           </provider>
@@ -129,13 +132,13 @@
         <option value="$PROJECT_DIR$/client/js/hearu.js" />
         <option value="$PROJECT_DIR$/demo/horidrag.coffee" />
         <option value="$PROJECT_DIR$/client/hearu.less" />
-        <option value="$PROJECT_DIR$/client/less_lib/framework.less" />
         <option value="$PROJECT_DIR$/demo/hearu.js" />
         <option value="$PROJECT_DIR$/demo/index.html" />
         <option value="$PROJECT_DIR$/demo/hearu.coffee" />
         <option value="$PROJECT_DIR$/demo/dragswitch.coffee" />
         <option value="$PROJECT_DIR$/client/less_lib/entrylist.less" />
         <option value="$PROJECT_DIR$/demo/sslog.js" />
+        <option value="$PROJECT_DIR$/client/less_lib/framework.less" />
       </list>
     </option>
   </component>
@@ -223,56 +226,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hearU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hearU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hearU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hearU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="widget" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hearU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hearU" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="less_lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -338,13 +291,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="22" width="1227" height="778" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24938875" sideWeight="0.6713881" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24938875" sideWeight="0.6713881" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -467,37 +420,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/hearu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="35" selection-start="627" selection-end="627" vertical-scroll-proportion="-13.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/less_lib/framework.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/hearu.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="0" selection-start="122" selection-end="122" vertical-scroll-proportion="0.091603056">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/hearu.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="29" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -509,9 +434,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/less_lib/entrylist.less">
+    <entry file="file://$PROJECT_DIR$/demo/sslog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="3" selection-start="548" selection-end="548" vertical-scroll-proportion="-15.32">
+        <state line="3" column="0" selection-start="85" selection-end="171" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/hearu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="23" selection-start="584" selection-end="584" vertical-scroll-proportion="-1.625">
           <folding />
         </state>
       </provider>
@@ -523,9 +462,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/sslog.js">
+    <entry file="file://$PROJECT_DIR$/demo/hearu.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="85" selection-end="171" vertical-scroll-proportion="0.06637168">
+        <state line="46" column="29" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/less_lib/entrylist.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="3" selection-start="548" selection-end="548" vertical-scroll-proportion="-26.4">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/less_lib/framework.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="21" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.82300884">
           <folding />
         </state>
       </provider>
