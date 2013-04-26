@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <title>Hear [U]</title>
+  <link rel="stylesheet" href="../client/hearu.css"/>
+  <link rel="stylesheet" href="../client/play.css"/>
+  <link rel="stylesheet" href="../client/main.css" />
+
+  <script src="http://a.tbcdn.cn/s/kissy/1.3.0/seed-min.js"></script>
+
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]>
+  <link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+  <script>
+      function toggleCodes(on) {
+        var obj = document.getElementById('icons');
+        
+        if (on) {
+          obj.className += ' codesOn';
+        } else {
+          obj.className = obj.className.replace(' codesOn', '');
+        }
+      }
+      
+  </script>
+  <script type="text/javascript">
+//    KISSY.config({
+//      packages:[
+//        {
+//          debug: true,
+//          name:"widget", // 包名
+//          path:"client/" // 包对应路径, 相对路径指相对于当前页面路径
+//        }
+//      ]
+//    });
+  </script>
+</head>
+
+<body>
+<!--登录界面在另一个新的页面，其它页面都在这里-->
+<section id="Menu"></section>
+
+<section id="Main" class="EntryList">
+  <section id="EntryList">
+    <header class="head-bar">我的歌单</header>
+    <div class="entry-list-wrapper">
+      <ul class="entry-list-box">
+        <li class="entry-list-item" style="height: 80px;">
+          <div class="entry-item-ctrl-bar" style="display: none;">
+            <span class="entry-item-ctrl-left"><i class="icon-heart-circled"></i></span>
+            <span class="entry-item-ctrl-right"><i class="icon-off"></i></span>
+          </div>
+          <div class="entry-item" style="display: none;">
+              <span class="list-name">默认歌单<b class="list-num">(80)</b></span>
+              <i class="icon-pause-circled play-btn"></i>
+          </div>
+          <!--entry-item 可以左右滑动-->
+          <div class="entry-item-edit-panel" style="display: block;">
+            <div class="entry-item-edit-bar">
+                <i class="icon-down-open"></i>
+                <div class="entry-item-editbox">
+                    <input class="entry-item-name-input entry-item-input" value="默认歌单" />
+                </div>
+            </div>
+            <div class="entry-item-edit-tags">
+                <div class="entry-item-editbox">
+                    <input class="entry-item-tag-input entry-item-input" placeholder="多个标签以逗号分隔" />
+                </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="entry-list-item">
+          <div class="entry-item-ctrl-bar">
+              <span class="entry-item-ctrl-left"><i class="icon-heart-circled"></i></span>
+              <span class="entry-item-ctrl-right"><i class="icon-off"></i></span>
+          </div>
+          <div class="entry-item">
+              <span class="list-name">倾听的喜悦，五颜六色的环球极……<b class="list-num">(140)</b></span>
+              <i class="icon-play-circled2 play-btn"></i>
+          </div>
+          <!--entry-item 可以左右滑动-->
+          <div class="entry-item-edit-panel">
+              <div class="entry-item-edit-bar">
+                  <i class="icon-down-open"></i>
+                  <div class="entry-item-editbox">
+                      <input class="entry-item-name-input entry-item-input" value="倾听的喜悦，五颜六色的环球极……" />
+                  </div>
+              </div>
+              <div class="entry-item-edit-tags">
+                  <div class="entry-item-editbox">
+                      <input class="entry-item-tag-input entry-item-input" placeholder="多个标签以逗号分隔" />
+                  </div>
+              </div>
+          </div>
+        </li>
+
+        <li class="entry-list-item">
+          <div class="entry-item-ctrl-bar">
+              <span class="entry-item-ctrl-left"><i class="icon-heart-circled"></i></span>
+              <span class="entry-item-ctrl-right"><i class="icon-off"></i></span>
+          </div>
+          <div class="entry-item">
+              <span class="list-name">你若不红，天理难容。第二辑<b class="list-num">(20)</b></span>
+              <i class="icon-play-circled2 play-btn"></i>
+          </div>
+          <!--entry-item 可以左右滑动-->
+          <div class="entry-item-edit-panel">
+              <div class="entry-item-edit-bar">
+                  <i class="icon-down-open"></i>
+                  <div class="entry-item-editbox">
+                      <input class="entry-item-name-input entry-item-input" value="你若不红，天理难容。第二辑" />
+                  </div>
+              </div>
+              <div class="entry-item-edit-tags">
+                  <div class="entry-item-editbox">
+                      <input class="entry-item-tag-input entry-item-input" placeholder="多个标签以逗号分隔" />
+                  </div>
+              </div>
+          </div>
+        </li>
+
+        <li class="entry-list-item">
+          <div class="entry-item-ctrl-bar">
+              <span class="entry-item-ctrl-left"><i class="icon-heart-circled"></i></span>
+              <span class="entry-item-ctrl-right"><i class="icon-off"></i></span>
+          </div>
+          <div class="entry-item">
+              <span class="list-name">妖娆女声，百听不厌。<b class="list-num">(2)</b></span>
+              <i class="icon-play-circled2 play-btn"></i>
+          </div>
+          <!--entry-item 可以左右滑动-->
+          <div class="entry-item-edit-panel">
+              <div class="entry-item-edit-bar">
+                  <i class="icon-down-open"></i>
+                  <div class="entry-item-editbox">
+                      <input class="entry-item-name-input entry-item-input" value="妖娆女声，百听不厌。" />
+                  </div>
+              </div>
+              <div class="entry-item-edit-tags">
+                  <div class="entry-item-editbox">
+                      <input class="entry-item-tag-input entry-item-input" placeholder="多个标签以逗号分隔" />
+                  </div>
+              </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="bottom-tips">往上拖动查看更多……</div>
+  </section>
+
+  <!-- SongList显示
+  <section id="SongList" style="top:0px;">
+  -->
+  <section id="SongList">
+    <header class="head-bar">倾听的喜悦，五颜六色的环球极……</header>
+    <div class="search-bar">
+        <div class="search-bar-searchbox">
+            <i class="icon-search"></i>
+            <i class="icon-error-alt search-cancel"></i>
+            <input class="search-input" placeholder="添加新歌曲……" />
+        </div>
+    </div>
+    <div class="entry-list-wrapper">
+        <ul class="entry-list-box">
+            <li class="entry-list-item playing" style="border:0;background: #666;">
+                <div class="entry-item-ctrl-bar">
+                    <span class="entry-item-ctrl-left" style="background: none;"><i class="icon-heart-circled"></i></span>
+                    <span class="entry-item-ctrl-right"><i class="icon-off"></i></span>
+                </div>
+                <div class="entry-item" style="background: #666;">
+                    <div class="song-item">
+                        <i class="icon-pause-circled play-btn"></i>
+                        <span class="list-name"><i class="icon-music"></i>妖娆女声，百听不厌</span>
+                    </div>
+                </div>
+            </li>
+
+            <li class="entry-list-item" style="border:0;background: #666;">
+                <div class="entry-item-ctrl-bar">
+                    <span class="entry-item-ctrl-left" style="background: none;"><i class="icon-heart-circled"></i></span>
+                    <span class="entry-item-ctrl-right"><i class="icon-off"></i></span>
+                </div>
+                <div class="entry-item" style="background: #666;">
+                    <div class="song-item">
+                        <i class="icon-play-circled2 play-btn"></i>
+                        <span class="list-name"><i class="icon-music"></i>妖娆女声，百听不厌</span>
+                    </div>
+                </div>
+            </li>
+
+            <li class="entry-list-item" style="border:0;background: #666;">
+                <div class="entry-item-ctrl-bar">
+                    <span class="entry-item-ctrl-left" style="background: none;"><i class="icon-heart-circled"></i></span>
+                    <span class="entry-item-ctrl-right"><i class="icon-off"></i></span>
+                </div>
+                <div class="entry-item" style="background: #666;">
+                    <div class="song-item">
+                        <i class="icon-play-circled2 play-btn"></i>
+                        <span class="list-name"><i class="icon-music"></i>妖娆女声，百听不厌</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+  </section>
+
+  <!--   PlayBox显示
+  <section id="PlayBox" style="left:0px">
+  -->
+  <section id="PlayBox">
+    <header class="head-bar"><i class="icon-music"></i> 正在播放：晴天</header>
+    <div class="song-play-wrapper">
+    	<ul class="song-play-cover">
+    		<li>03:09</li>
+    		<li class="song-cover-img"><i class="icon-left-open"></i><img src="http://img.xiami.com/./images/album/img68/7068/1637504261363750426_5.jpeg" width="150" alt=""><i class="icon-right-open"></i></li>
+    		<li class="song-play-tool"><i class="icon-heart-circled"></i><i class="icon-trash-circled"></i></li>
+    	</ul>
+    </div>
+    <ul class="recomend-song-list">
+    	<li class="first-recomend"><a href="#">查找朱倩的其它歌曲</a></li>
+    	<li><a href="#">查看收藏者的其它歌曲</a></li>
+    	<li class="last-recomend"><a href="#">猜你会喜欢的歌</a></li>
+    </ul>
+  </section>
+</section>
+<script type="text/javascript" src="sslog.js"></script>
+<script type="text/javascript" src="dragswitch.js"></script>
+<script type="text/javascript" src="hearu.js"></script>
+</body>
+</html>
